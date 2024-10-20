@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karlsson EL</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Add your CSS styles here */
+        /* Adjustments for smaller screens */
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            max-width: 100%;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            background-color: white;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            width: 120px;
+            height: auto;
+        }
+        
+        nav ul {
+            display: none;
+        }
+        
+        .nav-link {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .background {
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('bro_main.png');
+            background-size: cover;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .background-item a {
+            color: inherit;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-family: 'Oswald', sans-serif;
+        }
+        
+        #service-method {
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        
+        #service-method .service,
+        #service-method .method {
+            margin-bottom: 20px;
+        }
+        
+        #service-method img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .contact-form {
+            margin-top: 20px;
+        }
+        
+        .contact-info {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        
+        .footer {
+            padding: 20px 0;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#home-node"><img src="main_logo.jpg" alt="Logo" class="logo"></a>
+                <nav>
+                    <div class="menu-toggle">&#9776;</div>
+                    <ul>
+                        <li><a href="#home-node" class="nav-link">Hem</a></li>
+                        <li><a href="#service-node" class="nav-link">Tjänster</a></li>
+                        <li><a href="#contact-node" class="nav-link">Kontakt</a></li>
+                        <li><a href="#map-node" class="nav-link">Hitta oss</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="background">
+        <div class="background-item">
+            <a>Trygga lösningar för morgondagens behov</a><br><br>
+            <a><b>Karlsson Elinstallationer i Väst AB</b>: Din partner där trygghet och kvalitet går hand i hand</a>
+        </div>
+    </div>
+
+    <div id="service-method">
+        <div class="service">
+            <div class="image-container">
+                <img src="mid1.png" alt="Description of Image 1">
+                <a>agsgsrasgeagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgess</a>
+            </div>
+        </div>
+        <div class="method">
+            <div class="image-container">
+                <img src="mid4.png" alt="Description of Image 1">
+                <a>agsgsrasgeagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgesagsgsrasgess</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-node"></div>
+    <div class="contact-info">
+        <h3>TELEFON</h3>
+        <p>07XXXXXXX</p>
+        <br><br>
+        <h3>EPOST</h3>
+        <p>exempel@exempel.se</p>
+        <br><br>
+        <h3>ADRESS</h3>
+        <p>LUNDAVÄGEN 1</p>
+        <p>519 94 Björketorp</p>
+        <p>Västra Götalands län</p>
+    </div>
+
+    <form action="contactform.php" method="post" class="contact-form">
+        <fieldset>
+            <label for="name">Namn <abbr class="required" title="required">*</abbr></label>
+            <input type="text" id="name" name="name" placeholder="Namn*" required>
+    
+            <label for="email">E-post <abbr class="required" title="required">*</abbr></label>
+            <input type="email" id="email" name="email" placeholder="E-post*" required>
+    
+            <label for="phone">Telefon</label>
+            <input type="text" id="phone" name="phone" placeholder="Telefon">
+    
+            <label for="customer-type">Kundtyp <abbr class="required" title="required">*</abbr></label>
+            <select id="customer-type" name="customer-type" required>
+                <option value="">Välj kundtyp*</option>
+                <option value="privat">Privat</option>
+                <option value="företag">Företag</option>
+            </select>
+    
+            <label for="subject">Ämne <abbr class="required" title="required">*</abbr></label>
+            <input type="text" id="subject" name="subject" placeholder="Ämne*" required>
+    
+            <label for="message">Meddelande <abbr class="required" title="required">*</abbr></label>
+            <textarea id="message" name="message" placeholder="Meddelande*" required></textarea>
+    
+            <input type="checkbox" id="consent" name="consent" value="true" required>
+            <label for="consent">Jag har tagit del av hur Karlsson Elinstallationer hanterar mina personuppgifter (<a href="https://medwinpublishers.com/IZAB/the-capybara-hydrochoeus-hydrochaeris.pdf" target="_blank">läs mer här</a>) <abbr class="required" title="required">*</abbr></label>
+    
+            <input type="hidden" name="avia_generated_form1" value="1">
+            <input type="submit" value="Skicka" class="button" data-sending-label="Sending">
+        </fieldset>
+        <div class="form-disabled-message">??</div>
+    </form>
+    <div id="ajaxresponse_1" class="ajaxresponse hidden"></div>
+
+    <div id="map-node"></div>
+    <div class="map">
+        <iframe src="https://snazzymaps.com/embed/594039" width="100%" height="400px" style="border:none;"></iframe>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Karlsson Elinstallationer i väst AB</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add your JavaScript here
+        // Toggle navigation menu for small screens
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">

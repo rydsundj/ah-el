@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AH El & Entreprenad</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #active-link-indicator,
+        #hover-link-indicator {
+            position: absolute;
+            bottom: 0;
+            height: 3px;
+            background-color: #ffc638;
+            transition: width 0.8s ease;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<!----------------- HEADER START -------------------->
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#home"><img src="images/main_logo.jpg" alt="Logo" class="logo"></a>
+                <button id="menu-toggle" class="menu-toggle">
+                    <img src="images/dropdown.png" alt="Menu">
+                </button>
+                <nav id="nav-menu">
+                    <ul>
+                        <li><a href="#home" class="nav-link">Hem</a></li>
+                        <li><a href="#service-node" class="nav-link">Tjänster</a></li>
+                        <li><a href="#contact-node" class="nav-link">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <div id="active-link-indicator"></div>
+                <div id="hover-link-indicator"></div>
+            </div>
+        </div>
+    </header>
+    
+
+
+<!----------------- HEADER END -------------------->
+
+
+<div id="backG" class="background">
+    <video autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="" oncontextmenu="return false;" preload="auto" id="bg-video">
+        <source src="images/roof_vid2.mp4" type="video/mp4">
+    </video>
+    <img src="images/holm_roof_full.jpg" alt="Roof Image" id="bg-image" style="display:none; width:100%; height:auto;">
+    <div class="text-overlay">
+        <a>Trygga <b>lösningar</b> för morgondagens behov</a><br>
+        <br>
+        <a>Din partner där <b>trygghet</b> och <b>kvalitet</b> går hand i hand</a>
+    </div>
+</div>
+    <div id = "service-node"></div>
+
+    <div id="service-method">
+        <div class="service">
+            
+            <div class="image-container">
+                <img src="images/holm_roof.jpg" alt="Description of Image 1">
+
+                <a><b>Tjänster</b> <br>Med vår expertis och erfarenhet erbjuder vi professionella tjänster såsom installation, reparation och underhåll av elsystem för både hem och företag. Vi strävar efter att leverera högkvalitativa lösningar som säkerställer din trygghet och komfort.</a>
+            </div>
+        </div>
+
+        <div class="service-border"></div>
+
+        <div class="method">
+            <div class="image-container">
+                <img src="images/roof1.jpg" alt="Description of Image 1">
+                <a><b>Metoder</b> <br>Genom avancerad teknik och noggrann planering utför vi installationer, felsökningar och underhåll av elsystem med precision och effektivitet. Vår dedikation till säkerhet och kvalitet säkerställer att varje projekt genomförs med bästa möjliga resultat.</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="tempH2">
+        <h2>Våra samarbetspartners</h2>
+    </div>
+
+    <div class="workers">
+        <div class="extra-text">
+            <img src="images/karlsson_logo.jpg" alt="holm">
+        </div>
+    </div>
+
+
+    <div id = "contact-node"></div>
+
+    <div id ="contact-section">
+        <div class = "contact-form" id="contact-form">
+            <div class = "inner">
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                    <fieldset>
+                        <label for="name">Namn <abbr class="required" title="required">*</abbr></label>
+                        <input type="text" id="name" name="name" placeholder="Namn*" required>
+                
+                        <label for="email">E-post <abbr class="required" title="required">*</abbr></label>
+                        <input type="email" id="email" name="email" placeholder="E-post*" required>
+                
+                        <label for="phone">Telefon</label>
+                        <input type="text" id="phone" name="phone" placeholder="Telefon">
+                
+                        <label for="customer-type">Kundtyp <abbr class="required" title="required">*</abbr></label>
+                        <select id="customer-type" name="customer-type" required>
+                            <option value="">Välj kundtyp*</option>
+                            <option value="privat">Privat</option>
+                            <option value="företag">Företag</option>
+                        </select>
+                
+                        <label for="subject">Ämne <abbr class="required" title="required">*</abbr></label>
+                        <input type="text" id="subject" name="subject" placeholder="Ämne*" required>
+                
+                        <label for="message">Meddelande <abbr class="required" title="required">*</abbr></label>
+                        <textarea id="message" name="message" placeholder="Meddelande*" required></textarea>
+                
+                        <input type="checkbox" id="consent" name="consent" value="true" required>
+                        <label for="consent">Jag har tagit del av hur AH El - Entreprenad hanterar mina personuppgifter (<a href="https://medwinpublishers.com/IZAB/the-capybara-hydrochoeus-hydrochaeris.pdf" target="_blank">läs mer här</a>) <abbr class="required" title="required">*</abbr></label>
+                
+                        <input type="hidden" name="avia_generated_form1" value="1">
+                        <input type="submit" value="Skicka" class="button" data-sending-label="Sending">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact-border"></div>
+
+        <div class = "contact-info" id="contact-info">
+            <div class = "inner">
+                <h3>TELEFON</h3>
+                <p>07XXXXXXX</p>
+                <br>
+                <br>
+        
+        
+                <h3>EPOST</h3>
+                <p>axel.holm@ah-el.com</p>
+                <br>
+                <br>
+
+                <h3>ORG-NR</h3>
+                <p>559496-7662</p>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AH El - Entreprenad AB</p>
+            <p>Website created by IOCAPY</p>
+
+        </div>
+    </footer>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
