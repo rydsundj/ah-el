@@ -1,0 +1,6 @@
+-fler bilder till metoder, möjlighet att kunna bläddra bland dom
+
+knappen på tjänster ska scrolla ner smooth
+
+
+mobil ser dåligt ut.

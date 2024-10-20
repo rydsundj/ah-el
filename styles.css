@@ -217,61 +217,51 @@ nav ul li a {
 }
 
 
-
 #service-method {
-    flex-wrap: wrap; 
     display: flex;
-    justify-content: center;
-    border-radius: 5px;
+    justify-content: space-between; /* Distribute space evenly between boxes */
     margin-left: 10%;
     margin-right: 10%;
     border-bottom: 2px solid #ccc;
     font-size: 20px;
 }
 
-#service-method .service, #service-method .method {
-    align-items: center;
-    text-align: center;
-    opacity: 1; 
-    transform: translateY(60px); 
-    transition: opacity 2s ease, transform 2s ease;
-
-}
-
-#service-method .service.show,
-#service-method .method.show{
-    opacity: 1; 
-    transform: translateY(0); 
-}
-
-
-#service-method img {
-    width: 90%; 
-    margin: 60px 60px; 
-    height: 400px; 
-    width: auto;   
-}
-
-
-
-
-
-.image-container {
-    display: flex;
-    align-items: center;
+#service-method .service, 
+#service-method .method {
+    flex: 1; /* Allow them to grow and fill space equally */
+    display: flex; /* Use flexbox for inner content */
+    justify-content: space-between; /* Evenly distribute content */
     padding: 20px;
-    background-color:#efebe8;
-    margin: 20px; /* Adds space between the containers */
-    border-radius: 15px; /* Adds rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Creates a shadow effect for "hovering" */
+    background-color: #efebe8;
+    margin: 20px; /* Space between the containers */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 600px; /* Set a minimum height that works for both boxes */
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    background-color: #efebe8;
+    margin: 20px; /* Space between the containers */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
 }
 
-.image-container:hover {
+#service-method img {
+    width: 90%; 
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px 0; /* Adjust margin as needed */
+}
+
+#service-method .service:hover,
+#service-method .method:hover {
     border: 2px solid #ffc638;
     transform: translateY(-10px); /* Lifts the container slightly on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0); /* Enhances the shadow on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
 }
+
+
 
 .image-container a {
     max-width: 590px;
@@ -279,39 +269,61 @@ nav ul li a {
     font-size: 20px;
 }
 
-
 @media (max-width: 1024px) {
-
+    /* Stack service boxes vertically */
     #service-method {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
-    #service-method img {
-        height: auto; /* Maintain aspect ratio */
-        max-width: 100%; /* Limit image width to container */
+    #service-method img{
+        display: none; /* Hide images on mobile */
     }
 
-    .image-container img {
-        display: none; /* Hide the image on small screens */
+    
+
+    /* Set image size and align buttons and text centrally */
+    #service-method .service, 
+    #service-method .method {
+        margin: 10px 0;
+        width: 100%; /* Full width on smaller screens */
     }
 
-    .image-container h2 {
-        position: relative; /* Use relative positioning */
-        top: 0; /* Reset top positioning */
-        right: 0; /* Reset right positioning */
-        width: 100%; /* Full width of container */
-        text-align: center; /* Center the text */
-        margin-top: 20px; /* Add margin for spacing */
-        transform: none; /* Remove any previous transform */
+    /* Button adjustments */
+    .button {
+        width: 100%;
+        margin: 10px 0;
     }
 
-    .image-container {
-        display: flex; /* Flex container to center content */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        height: auto; /* Adjust as necessary */
+    /* Text-overlay responsiveness */
+    .text-overlay {
+        top: 50%;
+        left: 50%;
+        font-size: 1.5em;
+        padding-top: 20px;
+    }
+
+    /* Navigation */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: black;
+        width: 100%;
+    }
+
+    nav.open {
+        display: flex;
     }
 }
+
 
 
 
@@ -456,4 +468,15 @@ nav ul li a {
 
 .worker-details {
     text-align: center; /* Optional: Center-align the text under the image */
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffc638; /* Change this to your preferred color */
+    color: #000; /* Change text color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
