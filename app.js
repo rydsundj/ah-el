@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const activeLinkIndicator = document.getElementById('active-link-indicator');
     const hoverLinkIndicator = document.getElementById('hover-link-indicator');
     const scrollToContactButton = document.getElementById('scrollToContactButton');
+    const logo = document.querySelector('.logo'); 
     
 
     function smoothScroll(targetId) {
@@ -37,6 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('mouseover', function() {
             updateIndicator(link, hoverLinkIndicator);
         });
+    });
+
+
+    logo.addEventListener('mouseover', function() {
+        updateIndicator(logo, hoverLinkIndicator); 
     });
 
     document.querySelector('nav').addEventListener('mouseleave', function() {
@@ -96,6 +102,18 @@ document.addEventListener('DOMContentLoaded', function() {
             imageContainer.src = images[currentIndex]; 
             imageContainer.style.opacity = 1;
         }, 500);
+    });
+
+    document.getElementById('arrow2').addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length; 
+        imageContainer.src = images[currentIndex]; 
+        imageContainer.style.transition = "opacity 0.5s ease";
+        imageContainer.style.opacity = 0; 
+
+        setTimeout(() => {
+            imageContainer.src = images[currentIndex]; 
+            imageContainer.style.opacity = 1;
+        },  500);
     });
 });
 
