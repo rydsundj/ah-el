@@ -20,7 +20,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 
-<!----------------- HEADER START -------------------->
 
 <body>
     <header>
@@ -33,8 +32,8 @@
                 <nav id="nav-menu">
                     <ul>
                         <li><a href="#home" class="nav-link">Hem</a></li>
-                        <li><a href="#service-node" class="nav-link">Tjänster</a></li>
-                        <li><a href="#contact-node" class="nav-link">Kontakt</a></li>
+                        <li><a href="#service" class="nav-link">Tjänster</a></li>
+                        <li><a href="#contact" class="nav-link">Kontakt</a></li>
                     </ul>
                 </nav>
                 <div id="active-link-indicator"></div>
@@ -42,13 +41,9 @@
             </div>
         </div>
     </header>
-    
 
 
-<!----------------- HEADER END -------------------->
-
-
-<div id="backG" class="background">
+<div id="backgroundId" class="background">
     <video autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="" oncontextmenu="return false;" preload="auto" id="bg-video">
         <source src="images/roof_vid2.mp4" type="video/mp4">
     </video>
@@ -59,7 +54,7 @@
         <a>Din partner där <b>trygghet</b> och <b>kvalitet</b> går hand i hand</a>
     </div>
 </div>
-    <div id = "service-node"></div>
+    <div id = "service"></div>
 
     <div id="service-method">
         <div class="service">
@@ -75,7 +70,7 @@
                     Har du frågor om oss eller våra tjänster? Tveka inte att kontakta oss via kontaktformuläret eller ring oss direkt! <br> 
                     
                 </a>
-                <br><a href="#contact-node" class="button" id="scrollToContactButton">Kontakta oss</a>
+                <br><a href="#contact" class="button" id="scrollToContactButton">Kontakta oss</a>
 
 
             </div>
@@ -86,28 +81,30 @@
         <div class="method">
             <div class="image-container">
                 <img src="images/roof1.jpg" alt="Description of Image 1">
+                <div class="arrow" id="arrow"></div> 
                 <a><b>Metoder</b> <br>Vi utför installationer, felsökningar och underhåll av elsystem genom välutvecklade <br>metoder och noggrann planering. Vårt fokus på säkerhet och kvalitet garanterar att varje projekt genomförs med högsta precision och effektivitet.</a>
             </div>
         </div>
     </div>
 
-    <div class="tempH2">
-        <h2>Våra samarbetspartners</h2>
+    <div class="partnerHead">
+            <h2>Våra samarbetsartners</h2>
     </div>
 
-    <div class="workers">
-        <div class="extra-text">
+    <div class="partners">
+        <a href="https://karlsson-el.se/" target="_blank">
             <img src="images/karlsson_logo.jpg" alt="holm">
-        </div>
+        </a>
     </div>
+    
 
 
-    <div id = "contact-node"></div>
+    <div id = "contact"></div>
 
     <div id ="contact-section">
         <div class = "contact-form" id="contact-form">
             <div class = "inner">
-                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                <form action="https://formspree.io/f/ah-el-form-01" method="POST" class="contact-form">
                     <fieldset>
                         <label for="name">Namn <abbr class="required" title="required">*</abbr></label>
                         <input type="text" id="name" name="name" placeholder="Namn*" required>
@@ -132,7 +129,11 @@
                         <textarea id="message" name="message" placeholder="Meddelande*" required></textarea>
                 
                         <input type="checkbox" id="consent" name="consent" value="true" required>
-                        <label for="consent">Jag har tagit del av hur AH El - Entreprenad hanterar mina personuppgifter (<a href="https://medwinpublishers.com/IZAB/the-capybara-hydrochoeus-hydrochaeris.pdf" target="_blank">läs mer här</a>) <abbr class="required" title="required">*</abbr></label>
+                        <label for="consent">
+                            Jag har tagit del av hur AH El - Entreprenad hanterar mina personuppgifter 
+                            (<a href="./docs/Integritetspolicy_ah-el.pdf" target="_blank">läs mer här</a>)
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
                 
                         <input type="hidden" name="avia_generated_form1" value="1">
                         <input type="submit" value="Skicka" class="button" data-sending-label="Sending">
@@ -144,9 +145,9 @@
         <div class="contact-border"></div>
 
         <div class = "contact-info" id="contact-info">
-            <div class = "inner">
+            <div class = "inner2">
                 <h3>TELEFON</h3>
-                <p>07XXXXXXX</p>
+                <p>072-234 21 22</p>
                 <br>
                 <br>
         
@@ -168,7 +169,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 AH El - Entreprenad AB</p>
-            <p>Website created by IOCAPY</p>
+            <p>Website created and hosted by IOCAPY</p>
 
         </div>
     </footer>

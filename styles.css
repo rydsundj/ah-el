@@ -1,23 +1,11 @@
-/*all*/
-
-
 body {
     overflow-x: hidden; 
     margin: 0px;
     padding: 0px;
     background-color: white;
     padding-top: 80px;
-    font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Add Oswald font before fallback fonts */
+    font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
 }
-
-section {
-    padding: 50px 0;
-}
-
-section h2 {
-    color: #333;
-}
-
 
 
 footer {
@@ -34,18 +22,12 @@ footer {
     font-weight: 400;
     font-style: normal;
 }
-.container {
-    max-width: 100%;
-    padding: 0 10px; 
-    box-sizing: border-box; 
-}
 
 
-
+/*---- header section ---->*/
 
 header {
     background-color: black;
-    padding: 0px;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -103,58 +85,23 @@ nav ul li a {
     
 }
 
-
-@media (max-width: 1024px) {
-    nav {
-        display: none; /* Hide the menu by default on mobile */
-        position: absolute;
-        top: 80px; /* Adjust based on header height */
-        right: 0;
-        background-color: black;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-    }
-
-    nav ul li {
-        margin: 0;
-        padding: 10px 0;
-    }
-
-    nav ul li a {
-        padding: 10px 0;
-        display: block;
-    }
-
-    /* Show the dropdown button */
-    .menu-toggle {
-        display: block; 
-        margin-left: auto; /* Push button to the right */
-    }
-
-    /* Show the menu when it's toggled */
-    nav.open {
-        display: flex; /* Flex display when the menu is open */
-        flex-direction: column;
-    }
-}
-
-
-
 .menu-toggle {
     display: none; 
     background: none;
     border: none;
-    font-size: 24px;
     cursor: pointer;
+    font-size: 10px; 
+    padding: 5px; 
+}
+
+.menu-toggle img {
+    width: 30px;
+    height: auto;
 }
 
 
+
+/*---- background section ---->*/
 
 .background {
     position: relative;
@@ -175,8 +122,6 @@ nav ul li a {
     padding-top: 300px;
 }
 
-
-
 .background video {
     min-width: 100%; 
     width: auto;
@@ -189,37 +134,34 @@ nav ul li a {
 
 }
 
+/*---- mid section ---->*/
 
 
-
-@media (max-width: 1024px) {
-
-    .background video {
-        display: none; 
-    }
-
-    .text-overlay {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        z-index: 10;
-        font-size: 1.5em; 
-        text-align: center;
-        width: 100%; 
-        padding-top: 20px; 
-    }
-
-    #bg-image {
-        display: block; 
-    }
+.image-container {
+    position: relative; 
 }
 
 
+.method img {
+    transition: opacity 0.5s ease;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%; 
+    left: 90%;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #ffc638; 
+    transform: translate(-50%, -50%) rotate(90deg); 
+    cursor: pointer;
+}
+
 #service-method {
     display: flex;
-    justify-content: space-between; /* Distribute space evenly between boxes */
+    justify-content: space-between; 
     margin-left: 10%;
     margin-right: 10%;
     border-bottom: 2px solid #ccc;
@@ -228,39 +170,37 @@ nav ul li a {
 
 #service-method .service, 
 #service-method .method {
-    flex: 1; /* Allow them to grow and fill space equally */
-    display: flex; /* Use flexbox for inner content */
-    justify-content: space-between; /* Evenly distribute content */
+    flex: 1; 
+    display: flex;
+    justify-content: space-between; 
     padding: 20px;
     background-color: #efebe8;
-    margin: 20px; /* Space between the containers */
-    border-radius: 15px; /* Rounded corners */
+    margin: 20px; 
+    border-radius: 15px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    min-height: 600px; /* Set a minimum height that works for both boxes */
     align-items: center;
     flex-direction: column;
     padding: 20px;
     text-align: center;
     background-color: #efebe8;
-    margin: 20px; /* Space between the containers */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+    margin: 20px; 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 #service-method img {
     width: 90%; 
-    height: auto; /* Maintain aspect ratio */
-    margin: 20px 0; /* Adjust margin as needed */
+    height: auto;
+    margin: 20px 0; 
 }
 
 #service-method .service:hover,
 #service-method .method:hover {
     border: 2px solid #ffc638;
-    transform: translateY(-10px); /* Lifts the container slightly on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 
 
 .image-container a {
@@ -269,95 +209,49 @@ nav ul li a {
     font-size: 20px;
 }
 
-@media (max-width: 1024px) {
-    /* Stack service boxes vertically */
-    #service-method {
-        flex-direction: column;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
 
-    #service-method img{
-        display: none; /* Hide images on mobile */
-    }
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffc638; 
+    color: #000; 
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
-    
-
-    /* Set image size and align buttons and text centrally */
-    #service-method .service, 
-    #service-method .method {
-        margin: 10px 0;
-        width: 100%; /* Full width on smaller screens */
-    }
-
-    /* Button adjustments */
-    .button {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    /* Text-overlay responsiveness */
-    .text-overlay {
-        top: 50%;
-        left: 50%;
-        font-size: 1.5em;
-        padding-top: 20px;
-    }
-
-    /* Navigation */
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav {
-        display: none;
-        position: absolute;
-        top: 80px;
-        right: 0;
-        background-color: black;
-        width: 100%;
-    }
-
-    nav.open {
-        display: flex;
-    }
+.partnerHead
+{
+    text-align: center;
 }
 
 
+.partners {
+    flex-direction: column; 
+    margin: 0 5%; 
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
 
-
-/*----------------- CONTACT START -------------------->*/
+/*---- contact section ---->*/
 
 #contact-section {
     display: flex;
-    justify-content: space-between; /* Change to space-between to distribute space */
-    align-items: flex-start; /* Align items to start to avoid stretching */
-    padding: 50px 15px; /* Reduced side padding */
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 50px 15px; 
     border-radius: 5px;
-    margin: 0 auto; /* Centering the whole section */
-    max-width: 1200px; /* Maximum width */
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin: 0 auto;
+    max-width: 1200px; 
+    flex-wrap: wrap; 
 }
-
-
 
 #contact-form,
 #contact-info {
-    flex: 1; /* Each takes up half of the container space */
-    min-width: 300px; /* Minimum width before wrapping */
+    flex: 1; 
+    min-width: 300px;
     padding: 20px;
-}
-
-@media (max-width: 1024px) {
-    #contact-section {
-        flex-direction: column;
-    }
-
-    #contact-form,
-    #contact-info {
-        padding: 10px; /* Reduced padding on smaller screens */
-    }
 }
 
 .contact-form fieldset {
@@ -408,75 +302,149 @@ nav ul li a {
     margin-right: 100px; 
 }
 
-.tempH2
+.inner2
 {
-    text-align: center;
+    padding-left: 70px;
 }
+
+
+/*---- smaller screens ---->*/
 
 
 @media (max-width: 1024px) {
-    .workers {
-        flex-direction: column; /* Stack items vertically */
-        margin: 0 5%; /* Smaller margins for mobile */
+
+    nav {
+        display: none; 
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        text-align: center;
     }
 
-    .worker1 {
-        margin: 0 auto; /* Center content on mobile */
-        max-width: 100%; /* Full width on mobile */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        margin: 0;
     }
 
-    .worker1 img {
-        width: 100%; /* Make the image fill the width */
-        max-width: 100%; /* No limit on mobile */
+    nav ul li {
+        margin: 0;
+        padding: 10px 0;
     }
 
-    .extra-text {
+    nav ul li a {
+        padding: 10px 0;
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block; 
+        margin-left: auto; 
+    }
+
+    .menu-toggle img {
+        width: 30px; 
+        height: auto; 
+    }
+
+
+
+    nav.open {
+        display: flex; 
+        flex-direction: column;
+    }
+
+
+
+    .background video {
+        display: none; 
+    }
+
+
+    .background {
+        height: auto; 
+    }
+
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        z-index: 10;
+        font-size: 1.5em; 
+        text-align: center;
+        width: 100%; 
+        padding-top: 20px; 
+    }
+
+    #bg-image {
+        display: block; 
+    }
+
+
+
+    #service-method {
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #service-method img{
+        display: none;
+    }
+
+    
+
+    #service-method .service, 
+    #service-method .method {
+        margin: 10px 0;
+    }
+
+    .button {
+        margin: 10px 0;
+    }
+
+    .text-overlay {
+        top: 50%;
+        left: 50%;
+        font-size: 1.5em;
+        padding-top: 20px;
+    }
+
+
+
+
+    #contact-section {
+        flex-direction: column;
+    }
+
+    #contact-form,
+    #contact-info {
+        padding: 10px;
+        margin-right: 0px;
+    }
+
+
+    .partners {
+        flex-direction: column; 
+        margin: 0 5%; 
         margin: 20px 0;
-        padding: 0 10px; /* Padding for better readability */
-        text-align: justify; /* Optional: Justify the text for cleaner appearance */
+        padding: 0 10px; 
+        text-align: justify;
     }
-}
+
+  
+
+    .arrow {
+        display: none; 
+    }
 
 
-.workers {
-    flex-direction: column; /* Stack items vertically */
-    margin: 0 5%; /* Smaller margins for mobile */
-}
-
-.workers {
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid #ccc;
-}
-
-.worker1 {
-
-    display: flex;
-    flex-direction: column; /* Stack image and worker details vertically */
-}
-.worker1 p {
-    font-size: large;
-    font-weight: 900;
-    text-align: center; /* Optional: Justify the text for cleaner appearance */
-
-}
-
-.worker1 img {
-    width: 350px; /* Set image size */
-    margin-bottom: 10px; /* Add space between image and the details */
-}
-
-.worker-details {
-    text-align: center; /* Optional: Center-align the text under the image */
-}
-
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ffc638; /* Change this to your preferred color */
-    color: #000; /* Change text color */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    .inner2 {
+        padding-left: 0;
+    }
 }

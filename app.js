@@ -2,6 +2,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     const activeLinkIndicator = document.getElementById('active-link-indicator');
     const hoverLinkIndicator = document.getElementById('hover-link-indicator');
+    const scrollToContactButton = document.getElementById('scrollToContactButton');
+    
+
+    function smoothScroll(targetId) {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            const headerOffset = document.querySelector('header').offsetHeight;
+            const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    }
 
     function updateIndicator(link, indicator) {
         const linkRect = link.getBoundingClientRect();
@@ -28,24 +44,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     navLinks.forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-            const headerOffset = document.querySelector('header').offsetHeight;
-            const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            smoothScroll(targetId);
+        });
     });
-});
 
-
+    scrollToContactButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetId = scrollToContactButton.getAttribute('href').substring(1);
+        smoothScroll(targetId);
+    });
 
     document.querySelector('.logo').addEventListener('click', scrollToTop);
     document.querySelector('.nav-link[href="#home"]').addEventListener('click', scrollToTop);
@@ -63,6 +73,30 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth'
         });
     }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const images = [
+        'images/roof1.jpg',
+        'images/roof2.jpg',
+        'images/roof3.jpg' 
+    ];
+    
+    let currentIndex = 0; 
+    const imageContainer = document.querySelector('.method img'); 
+
+    document.getElementById('arrow').addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % images.length; 
+        imageContainer.src = images[currentIndex]; 
+        imageContainer.style.transition = "opacity 0.5s ease";
+        imageContainer.style.opacity = 0; 
+
+        setTimeout(() => {
+            imageContainer.src = images[currentIndex]; 
+            imageContainer.style.opacity = 1;
+        }, 500);
+    });
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -100,8 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
 
-    // Toggle the menu when the dropdown button is clicked
     menuToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('open'); // Toggle the 'open' class
+        navMenu.classList.toggle('open'); 
     });
 });
