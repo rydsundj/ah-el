@@ -308,6 +308,10 @@ nav ul li a {
 }
 
 
+.desktop-only {
+    display: inline; 
+}
+
 /*---- smaller screens ---->*/
 
 
@@ -447,4 +451,9 @@ nav ul li a {
     .inner2 {
         padding-left: 0;
     }
+
+    .desktop-only {
+        display: none; 
+    }   
+
 }
