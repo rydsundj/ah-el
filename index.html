@@ -24,11 +24,15 @@
 <body>
     <header>
         <div class="container">
-            <div class="header-content">
-                <a href="#home"><img src="images/main_logo.jpg" alt="Logo" class="logo"></a>
+            <a href="#home"><img src="images/main_logo.jpg" alt="Logo" class="logo"></a>
+        </div>
+            <div class="drop-toggle">
                 <button id="menu-toggle" class="menu-toggle">
                     <img src="images/dropdown.png" alt="Menu">
                 </button>
+            </div>
+
+            <div class="header-content">
                 <nav id="nav-menu">
                     <ul>
                         <li><a href="#home" class="nav-link">Hem</a></li>
@@ -39,62 +43,108 @@
                 <div id="active-link-indicator"></div>
                 <div id="hover-link-indicator"></div>
             </div>
-        </div>
     </header>
 
 
+    <div id = "home"></div>
+
 <div id="backgroundId" class="background">
-    <video autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="" oncontextmenu="return false;" preload="auto" id="bg-video">
-        <source src="images/roof_vid2.mp4" type="video/mp4">
-    </video>
-    <img src="images/holm_roof_full.jpg" alt="Roof Image" id="bg-image" style="display:none; width:100%; height:auto;">
+    <img src="images/gbg.jpg" alt="Background Image" id="bg-image" class="desktop-only" style="width:100%; height:auto;">
+    <img src="images/holm_roof_full.jpg" alt="Roof Image" id="mobile-bg-image" style="width:100%; height:auto;">
     <div class="text-overlay">
-        <a>Trygga <b>lösningar</b> för morgondagens behov</a><br>
-        <br>
-        <a>Din partner där <b>trygghet</b> och <b>kvalitet</b> går hand i hand</a>
+        <a>Säkerhet – Våra installationer uppfyller alltid högsta säkerhetsklass</a><br><br>
+        <a>Trygghet – Professionell installation med kvalitetsprodukter säkerställer lång livslängd och låg totalkostnad</a>
+        <br><br>
+        <a>Personligt bemötande – Vi gör alltid vårt yttersta för att leverera en positiv kundupplevelse</a>
+
     </div>
 </div>
+
+
+
+<div class="help-section grid grid-col-1">
+    <div class="help-details">
+        <h2 class="wp-block-heading">Kontakta oss direkt</h2>
+        <p>Du är välkommen att ringa in för att boka tid, // jour ??? </p>
+        <p>Text 2</p>
+        <div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+            <div class="wp-block-button">
+                <a class="wp-block-button__link wp-element-button" href="tel:0722342122">
+                    📞 Ring 072-234 21 22
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="help-info is-vertically-aligned-center">
+        <ul class="wp-block-list">
+            <li>?? års erfarenhet</li>
+            <li>??</li>
+            <li>Certifierade elektriker</li>
+        </ul>
+    </div>
+</div>
+
+
+
     <div id = "service"></div>
 
-    <div id="service-method">
-        <div class="service">
-            
+    <div id="service-imagewheel">
+        <div class="service">   
             <div class="image-container">
-                <img src="images/holm_roof.jpg" alt="Description of Image 1">
-                <br>
-                <a>
-                    <b>Våra tjänster</b> <br>
-                    Vi erbjuder en bred variation av professionella tjänster, från stora till små jobb. <br>Med vår expertis inom installation, reparation och underhåll av elsystem, inklusive solcellsinstallationer, säkerställer vi högkvalitativa lösningar för både hem och företag. <br>Vi strävar efter att ge dig trygghet och komfort i varje projekt. 
-                    <br><br>
-                    Har du frågor om oss eller våra tjänster? Tveka inte att kontakta oss via kontaktformuläret eller ring oss direkt! <br> 
-                    
-                </a>
-                <br><a href="#contact" class="button" id="scrollToContactButton">Kontakta oss</a>
+                <h3>Våra tjänster</h3>
+                <!-- Buttons to reveal text -->
+                <button class="reveal-btn" onclick="showText('serviceText1')">Elinstallationer</button>
+                <div id="serviceText1" class="reveal-text">
+                    <p>Vi utför elinstallationer både för privatpersoner och företag, och levererar bästa kvalitet till låg totalkostnad. Tillsammans med våra samarbetspartners tar vi ansvar för planering, projektering, inköp och installation.</p>
+                </div>
+                <button class="reveal-btn" onclick="showText('serviceText2')">Elservice</button>
+                <div id="serviceText2" class="reveal-text">
+                    <p>Vid elfel eller olycka bistår vi med att elsäkra, felsöka och genomföra åtgärder så att du som kund får en trygg och säker anläggning.</p>
+                </div>
+                <button class="reveal-btn" onclick="showText('serviceText3')">Analys och elsäkerhetsgenomgång</button>
+                <div id="serviceText3" class="reveal-text">
+                    <p>Vi genomför elsäkerhetsgenomgångar i förebyggande syfte och föreslår lämpliga förbättringar för en säker anläggning och förbättrad ekonomi.</p>
+                </div>
+                <button class="reveal-btn" onclick="showText('serviceText4')">Solpaneler och laddstationer</button>
+                <div id="serviceText4" class="reveal-text">
+                    <p>Vi är mycket konkurrenskraftiga på installationer av högkvalitativa solpaneler och laddstationer, tack vare nära samarbete med ledande leverantörer och effektiv installationsprocess.</p>
+                </div>
+                
+
 
 
             </div>
         </div>
 
-        <div class="service-border"></div>
-
-        <div class="method">
+        <div class="imagewheel">
             <div class="image-container">
                 <img src="images/roof1.jpg" alt="roof1">
                 <div class="arrow" id="arrow"></div> 
                 <div class="arrow2" id="arrow2"></div> 
-                <br>
-
-                <a>
-                    <b>Hur vi jobbar</b> <br>
-                    Vi utför installationer, felsökningar och underhåll av elsystem genom <br>välutvecklade
-                    metoder och noggrann planering. Vårt fokus på säkerhet och kvalitet garanterar att varje projekt genomförs med högsta precision och effektivitet. 
-                    Vi har omfattande utbildningar inom elteknik, vilket säkerställer att vi är väl rustade för att hantera alla sorts uppgifter. 
-                    Med en kombination av erfarenhet och kontinuerlig kompetensutveckling kan vi alltid leverera lösningar som uppfyller både branschstandarder och våra kunders förväntningar.
-                    <br><br><span class="desktop-only">Kika gärna igenom några av våra tidigare jobb ovan.</span>
-                </a>
+                </div>
             </div>
         </div>
     </div>
+
+
+
+
+    <div class="method">
+        <div class="method-content">
+            <p>Eftersom vi arbetar med el så är säkerhet alltid vår högsta prioritet, både för vår egen skull och för att våra kunder ska ha en elsäker anläggning. Det innebär att vi bara använder förstklassiga produkter och material, och att vi alltid noggrant efterlever gällande säkerhetsföreskrifter. Allt arbete utförs av erfaren personal med rätt utbildning och kompetens.</p>
+        <br>
+        <br>
+            <p>Våra kunder ska alltid känna sig trygga med att de fått en förstklassig elanläggning till rätt pris. Vår kvalitet på utfört arbete och val av komponenter säkerställer inte bara en säker anläggning med lång livslängd, utan även en låg totalkostnad för våra kunder.</p>
+            <br>
+            <br>
+            <p>Vi brinner för vårt yrke som elektriker och gör alltid vårt yttersta för våra kunder ska tycka det är trevligt att samarbeta med oss. Vi kommer därför i tid, håller vad vi lovar, behandlar våra medmänniskor med respekt och städar efter oss.</p>
+        
+            <p>Välkommen att kontakta oss, vi ser fram emot att samarbeta med dig!</p>
+        </div>
+    </div>
+
+    
 
     <div class="partnerHead">
             <h2>Våra samarbetspartners</h2>
@@ -177,7 +227,7 @@
 
 
     <footer>
-        <div class="container">
+        <div class="container-foot">
             <p>&copy; 2024 AH El - Entreprenad AB</p>
             
             <p>Website created and hosted by <a href="https://iocapy.com/" target="_blank" style="color: white;">IOCAPY</a></p>

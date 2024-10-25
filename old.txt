@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AH El & Entreprenad</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #active-link-indicator,
+        #hover-link-indicator {
+            position: absolute;
+            bottom: 0;
+            height: 3px;
+            background-color: #ffc638;
+            transition: width 0.8s ease;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <header>
+        <div class="container">
+            <a href="#home"><img src="images/main_logo.jpg" alt="Logo" class="logo"></a>
+        </div>
+            <div class="drop-toggle">
+                <button id="menu-toggle" class="menu-toggle">
+                    <img src="images/dropdown.png" alt="Menu">
+                </button>
+            </div>
+
+            <div class="header-content">
+                <nav id="nav-menu">
+                    <ul>
+                        <li><a href="#home" class="nav-link">Hem</a></li>
+                        <li><a href="#service" class="nav-link">Tjänster</a></li>
+                        <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <div id="active-link-indicator"></div>
+                <div id="hover-link-indicator"></div>
+            </div>
+    </header>
+
+
+    <div id = "home"></div>
+
+<div id="backgroundId" class="background">
+    <img src="images/gbg.jpg" alt="Background Image" id="bg-image" class="desktop-only" style="width:100%; height:auto;">
+    <img src="images/holm_roof_full.jpg" alt="Roof Image" id="mobile-bg-image" style="width:100%; height:auto;">
+    <div class="text-overlay">
+        <a>Säkerhet – Våra installationer uppfyller alltid högsta säkerhetsklass</a><br><br>
+        <a>Trygghet – Professionell installation med kvalitetsprodukter säkerställer lång livslängd och låg totalkostnad</a>
+        <br><br>
+        <a>Personligt bemötande – Vi gör alltid vårt yttersta för att leverera en positiv kundupplevelse</a>
+
+    </div>
+</div>
+
+
+
+<div class="help-section grid grid-col-1">
+    <div class="help-details">
+        <h2 class="wp-block-heading">Kontakta oss direkt</h2>
+        <p>Du är välkommen att ringa in för att boka tid, // jour ??? </p>
+        <p>Text 2</p>
+        <div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+            <div class="wp-block-button">
+                <a class="wp-block-button__link wp-element-button" href="tel:0722342122">
+                    📞 Ring 072-234 21 22
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="help-info is-vertically-aligned-center">
+        <ul class="wp-block-list">
+            <li>?? års erfarenhet</li>
+            <li>?? planerade uppdrag om året</li>
+            <li>Certifierade elektriker och rörmokare</li>
+        </ul>
+    </div>
+</div>
+
+
+
+    <div id = "service"></div>
+
+    <div id="service-method">
+        <div class="service">   
+            <div class="image-container">
+                <h3>Våra tjänster</h3>
+                <!-- Buttons to reveal text -->
+                <button class="reveal-btn" onclick="showText('serviceText1')">Elinstallationer</button>
+                <div id="serviceText1" class="reveal-text">
+                    <p>Vi utför elinstallationer både för privatpersoner och företag, och levererar bästa kvalitet till låg totalkostnad. Tillsammans med våra samarbetspartners tar vi ansvar för planering, projektering, inköp och installation.</p>
+                </div>
+                <button class="reveal-btn" onclick="showText('serviceText2')">Elservice</button>
+                <div id="serviceText2" class="reveal-text">
+                    <p>Vid elfel eller olycka bistår vi med att elsäkra, felsöka och genomföra åtgärder så att du som kund får en trygg och säker anläggning.</p>
+                </div>
+                <button class="reveal-btn" onclick="showText('serviceText3')">Analys och elsäkerhetsgenomgång</button>
+                <div id="serviceText3" class="reveal-text">
+                    <p>Vi genomför elsäkerhetsgenomgångar i förebyggande syfte och föreslår lämpliga förbättringar för en säker anläggning och förbättrad ekonomi.</p>
+                </div>
+                <button class="reveal-btn" onclick="showText('serviceText4')">Solpaneler och laddstationer</button>
+                <div id="serviceText4" class="reveal-text">
+                    <p>Vi är mycket konkurrenskraftiga på installationer av högkvalitativa solpaneler och laddstationer, tack vare nära samarbete med ledande leverantörer och effektiv installationsprocess.</p>
+                </div>
+                
+                <!-- Hidden Text Sections -->
+
+
+
+            </div>
+        </div>
+
+     
+
+
+        <div class="service-border"></div>
+
+        <div class="method">
+            <div class="image-container">
+                <img src="images/roof1.jpg" alt="roof1">
+                <div class="arrow" id="arrow"></div> 
+                <div class="arrow2" id="arrow2"></div> 
+                <h3>Hur vi jobbar</h3>
+                <button class="reveal-btn" onclick="showText('methodText1')">Läs mer</button>
+                <div id="methodText1" class="reveal-text">
+                    <p>Vi utför elinstallationer både för privatpersoner och företag, och levererar bästa kvalitet till låg totalkostnad. Tillsammans med våra samarbetspartners tar vi ansvar för planering, projektering, inköp och installation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div class="partnerHead">
+            <h2>Våra samarbetspartners</h2>
+    </div>
+
+    <div class="partners">
+        <a href="https://karlsson-el.se/" target="_blank">
+            <img src="images/karlsson_logo.jpg" alt="holm">
+        </a>
+    </div>
+    
+
+
+    <div id = "contact"></div>
+
+    <div id ="contact-section">
+        <div class = "contact-form" id="contact-form">
+            <div class = "inner">
+                <form action="https://formspree.io/f/ah-el-form-01" method="POST" class="contact-form">
+                    <fieldset>
+                        <label for="name">Namn <abbr class="required" title="required">*</abbr></label>
+                        <input type="text" id="name" name="name" placeholder="Namn*" required>
+                
+                        <label for="email">E-post <abbr class="required" title="required">*</abbr></label>
+                        <input type="email" id="email" name="email" placeholder="E-post*" required>
+                
+                        <label for="phone">Telefon</label>
+                        <input type="text" id="phone" name="phone" placeholder="Telefon">
+                
+                        <label for="customer-type">Kundtyp <abbr class="required" title="required">*</abbr></label>
+                        <select id="customer-type" name="customer-type" required>
+                            <option value="">Välj kundtyp*</option>
+                            <option value="privat">Privat</option>
+                            <option value="företag">Företag</option>
+                        </select>
+                
+                        <label for="subject">Ämne <abbr class="required" title="required">*</abbr></label>
+                        <input type="text" id="subject" name="subject" placeholder="Ämne*" required>
+                
+                        <label for="message">Meddelande <abbr class="required" title="required">*</abbr></label>
+                        <textarea id="message" name="message" placeholder="Meddelande*" required></textarea>
+                
+                        <input type="checkbox" id="consent" name="consent" value="true" required>
+                        <label for="consent">
+                            Jag har tagit del av hur AH El - Entreprenad hanterar mina personuppgifter 
+                            (<a href="./docs/Integritetspolicy_ah-el.pdf" target="_blank">läs mer här</a>)
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                
+                        <input type="hidden" name="avia_generated_form1" value="1">
+                        <input type="submit" value="Skicka" class="button" data-sending-label="Sending">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact-border"></div>
+
+        <div class = "contact-info" id="contact-info">
+            <div class = "inner2">
+                <h3>TELEFON</h3>
+                <p>072-234 21 22</p>
+                <br>
+                <br>
+        
+        
+                <h3>EPOST</h3>
+                <p>axel.holm@ah-el.com</p>
+                <br>
+                <br>
+
+                <h3>ORG-NR</h3>
+                <p>559496-7662</p>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="container-foot">
+            <p>&copy; 2024 AH El - Entreprenad AB</p>
+            
+            <p>Website created and hosted by <a href="https://iocapy.com/" target="_blank" style="color: white;">IOCAPY</a></p>
+
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+
+body {
+    overflow-x: hidden; 
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    padding-top: 70px;
+    font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+
+
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: smaller;
+}
+
+.oswald-custom {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/*---- header section ---->*/
+
+header {
+    background-color: black;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.drop-toggle
+{
+    position: absolute;
+    right: 60px; /* Adjust this value to move it further or closer to the right edge */
+}
+
+.nav-link
+{
+    color: white;
+}
+
+.logo 
+{
+    width: 220px;
+    height: auto;
+    margin-right: 100px;
+}
+
+.container
+{
+    margin-left: 20px;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 20px 10px;
+    position: relative;
+    
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight:400;
+    padding: 20px 10px;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 10px; 
+    padding: 5px; 
+}
+
+.menu-toggle img {
+    width: 30px;
+    height: auto;
+}
+
+
+
+/*---- background section ---->*/
+
+.background {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    transform: translate(-40%, -40%);
+    color: white;
+    z-index: 10;
+    font-size: 2em;
+    font-weight:350; 
+    padding-top: 300px;
+}
+
+
+/*---- mid section ---->*/
+
+
+.image-container {
+    position: relative; 
+}
+
+
+.method img {
+    transition: opacity 0.5s ease;
+}
+
+.arrow {
+    position: absolute;
+    top: 30%; 
+    left: 90%;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #ffc638; 
+    transform: translate(-50%, -50%) rotate(90deg); 
+    cursor: pointer;
+}
+
+.arrow2 {
+    position: absolute;
+    top: 30%; 
+    left: 10%;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #ffc638; 
+    transform: translate(-50%, -50%) rotate(270deg); 
+    cursor: pointer;
+}
+
+#service-method {
+    display: flex;
+    justify-content: space-between; 
+    margin-left: 10%;
+    margin-right: 10%;
+    border-bottom: 2px solid #ccc;
+    font-size: 20px;
+}
+
+#service-method .service, 
+#service-method .method {
+    flex: 1; 
+    display: flex;
+    justify-content: space-between; 
+    padding: 20px;
+    margin: 20px; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 20px; 
+    border-radius: 15px;
+}
+
+#service-method img {
+    width: 90%; 
+    height: auto;
+    margin: 20px 0; 
+}
+
+#service-method .service:hover,
+#service-method .method:hover {
+}
+
+
+.image-container a {
+    max-width: 590px;
+    word-wrap: break-word;
+    font-size: 20px;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffc638; 
+    color: #000; 
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.partnerHead
+{
+    text-align: center;
+}
+
+
+.partners {
+    flex-direction: column; 
+    margin: 0 5%; 
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
+
+/*---- contact section ---->*/
+
+#contact-section {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 50px 15px; 
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 1200px; 
+    flex-wrap: wrap; 
+}
+
+#contact-form,
+#contact-info {
+    flex: 1; 
+    min-width: 300px;
+    padding: 20px;
+}
+
+.contact-form fieldset {
+    border: none;
+    padding: 0;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 225px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-disabled-message {
+    font-style: italic;
+}
+
+#contact-form
+{
+    margin-right: 100px; 
+}
+
+.inner2
+{
+    padding-left: 70px;
+}
+
+
+.desktop-only {
+    display: inline; 
+}
+
+/*---- smaller screens ---->*/
+
+
+#mobile-bg-image {
+    display: none; /* Default is hidden */
+}
+
+@media (max-width: 1024px) {
+
+
+    .container
+    {
+        margin-left: 20px;
+
+    }
+
+
+    .logo 
+    {
+        width: 160px;
+        height: auto;
+        margin-right: 100px;
+    }
+    nav {
+        display: none; 
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 0;
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block; 
+        margin-left: auto; 
+    }
+
+    .menu-toggle img {
+        width: 20px; 
+        height: auto; 
+    }
+
+
+
+    nav.open {
+        display: flex; 
+        flex-direction: column;
+    }
+
+    #mobile-bg-image {
+        display: block; /* Show mobile image */
+    }
+
+    #bg-image {
+        display: none; /* Hide desktop image on mobile */
+    }
+
+
+    .background {
+        height: auto; 
+    }
+
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        z-index: 10;
+        font-size: 1.5em; 
+        text-align: center;
+        width: 100%; 
+        padding-top: 20px; 
+    }
+
+
+
+    #service-method {
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #service-method img{
+        display: none;
+    }
+
+    
+
+    #service-method .service, 
+    #service-method .method {
+        margin: 10px 0;
+    }
+
+    .button {
+        margin: 10px 0;
+    }
+
+
+
+    #contact-section {
+        flex-direction: column;
+    }
+
+    #contact-form,
+    #contact-info {
+        padding: 10px;
+        margin-right: 0px;
+    }
+
+
+    .partners {
+        flex-direction: column; 
+        margin: 0 5%; 
+        margin: 20px 0;
+        padding: 0 10px; 
+        text-align: justify;
+    }
+
+  
+
+    .arrow {
+        display: none; 
+    }
+
+
+    .arrow2 {
+        display: none; 
+    }
+
+
+    .inner2 {
+        padding-left: 0;
+    }
+
+    .desktop-only {
+        display: none; 
+    }   
+
+}
+
+
+
+
+/* General container styling */
+.help-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.help-details h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.help-details p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+.wp-block-button a {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffc638;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.wp-block-button a:hover {
+    background-color: black;
+}
+
+.wp-block-button img {
+    margin-right: 0.5rem;
+}
+
+/* List styling */
+.help-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.help-info li {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.help-info li:last-child {
+    border-bottom: none;
+}
+
+.grid.grid-col-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem; /* Adjust spacing between rows as needed */
+}
+
+
+.reveal-text {
+    display: none; /* Hidden by default */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.reveal-text.show {
+    display: block;
+    opacity: 1;
+}
+
+
+.reveal-btn {
+    display: block; /* Makes the button take full width of its parent */
+    width: 300px; /* Sets a fixed width, adjust as needed */
+    padding: 12px 20px;
+    margin: 20px auto 0; /* Centers horizontally and adds top margin */
+    background-color: #ffc638;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Add a hover effect to the buttons */
+.reveal-btn:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #e6b531; /* Darken slightly on hover */
+}
