@@ -147,7 +147,7 @@ nav ul li a {
 
 .arrow {
     position: absolute;
-    top: 30%; 
+    top: 50%; 
     left: 90%;
     width: 0;
     height: 0;
@@ -160,7 +160,7 @@ nav ul li a {
 
 .arrow2 {
     position: absolute;
-    top: 30%; 
+    top: 50%; 
     left: 10%;
     width: 0;
     height: 0;
@@ -171,6 +171,10 @@ nav ul li a {
     cursor: pointer;
 }
 
+#service-imagewheel h3 {
+    font-size: 30px;
+}
+
 #service-imagewheel {
     display: flex;
     justify-content: space-between; 
@@ -178,6 +182,7 @@ nav ul li a {
     margin-right: 10%;
     border-bottom: 2px solid #ccc;
     font-size: 20px;
+    padding-bottom: 20px;
 }
 
 #service-imagewheel .service, 
@@ -232,6 +237,9 @@ nav ul li a {
     
     border-top: 2px solid #ccc;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
 }
 
 
@@ -351,9 +359,9 @@ nav ul li a {
         margin-right: 100px;
     }
     nav {
-        max-height: 0; /* Set initial height to 0 for hidden state */
-        overflow: hidden; /* Hide overflowing content */
-        transition: max-height 0.5s ease; /* Smooth transition */
+        max-height: 0; 
+        overflow: hidden; 
+        transition: max-height 0.5s ease; 
         position: absolute;
         top: 70px;
         right: 0;
@@ -392,7 +400,7 @@ nav ul li a {
 
 
     nav.open {
-        max-height: 300px; /* Adjust based on the content's height */
+        max-height: 300px; 
     }
 
     #mobile-bg-image {
@@ -502,13 +510,14 @@ nav ul li a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .help-details h2 {
-    font-size: 1.8rem;
+    font-size: 30px;
     color: #333;
     margin-bottom: 0.5rem;
     text-align: center;
 }
 .help-details p {
-    font-size: 1rem;
+    font-size: 20px;
+
     color: #555;
     text-align: center;
     line-height: 1.6;
@@ -522,7 +531,7 @@ nav ul li a {
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 20px;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
@@ -543,7 +552,7 @@ nav ul li a {
 }
 
 .help-info li {
-    font-size: 1rem;
+    font-size: 16px;
     color: #555;
     margin: 0.5rem 0;
     padding: 0.5rem;
@@ -582,7 +591,7 @@ nav ul li a {
     color: black;
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
@@ -599,5 +608,28 @@ nav ul li a {
 {
     margin-left: 10%;
     margin-right: 10%;
+    font-size: 30px;
 
+}
+
+
+#service
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.method
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.checkmark-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 8px;
 }
