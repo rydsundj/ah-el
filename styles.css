@@ -188,7 +188,6 @@ nav ul li a {
 #service-imagewheel .service, 
 #service-imagewheel .imagewheel {
     flex: 1; 
-    display: flex;
     justify-content: space-between; 
     padding: 20px;
     margin: 20px; 
@@ -441,7 +440,10 @@ nav ul li a {
         display: none;
     }
 
-    
+    .imagewheel
+    {
+        display: none;
+    }
 
     #service-imagewheel .service, 
     #service-imagewheel .imagewheel {
@@ -492,6 +494,11 @@ nav ul li a {
     .desktop-only {
         display: none; 
     }   
+
+    .method
+    {
+        font-size: 10px; 
+    }
 
 }
 
@@ -592,10 +599,11 @@ nav ul li a {
     border: none;
     border-radius: 8px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight:400;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: inherit; /* Ensures the button inherits the font-family from the surrounding elements */
 }
 .reveal-btn:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);

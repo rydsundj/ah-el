@@ -1,9 +1,27 @@
+  // TEXT REVEAL FOR SERVICES SECTION
+  function showText(id) {
+    console.log(id);  
+    const textBlock = document.getElementById(id);
+
+    if (textBlock.classList.contains('show')) {
+        textBlock.classList.remove('show');
+        setTimeout(() => textBlock.style.display = 'none', 500);
+    } else {
+        textBlock.style.display = 'block';
+        setTimeout(() => textBlock.classList.add('show'), 10);
+    }
+}
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
+    // NAVIGATION INDICATORS AND SCROLLING
     const navLinks = document.querySelectorAll('.nav-link');
     const activeLinkIndicator = document.getElementById('active-link-indicator');
     const hoverLinkIndicator = document.getElementById('hover-link-indicator');
     const logo = document.querySelector('.logo'); 
-    
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
 
     function smoothScroll(targetId) {
         const targetElement = document.getElementById(targetId);
@@ -34,17 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     navLinks.forEach(link => {
-        link.addEventListener('mouseover', function() {
-            updateIndicator(link, hoverLinkIndicator);
-        });
+        link.addEventListener('mouseover', () => updateIndicator(link, hoverLinkIndicator));
     });
 
+    logo.addEventListener('mouseover', () => updateIndicator(logo, hoverLinkIndicator));
 
-    logo.addEventListener('mouseover', function() {
-        updateIndicator(logo, hoverLinkIndicator); 
-    });
-
-    document.querySelector('nav').addEventListener('mouseleave', function() {
+    document.querySelector('nav').addEventListener('mouseleave', () => {
         hoverLinkIndicator.style.width = '0';
     });
 
@@ -56,14 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    document.querySelector('.logo').addEventListener('click', scrollToTop);
+    logo.addEventListener('click', scrollToTop);
     document.querySelector('.nav-link[href="#home"]').addEventListener('click', scrollToTop);
-
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav ul');
-    menuToggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-    });
 
     function scrollToTop(event) {
         event.preventDefault();
@@ -72,85 +79,46 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth'
         });
     }
-});
 
+    // MENU TOGGLE FOR MOBILE
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('open'); 
+    });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const images = [
-        'images/roof1.jpg',
-        'images/roof2.jpg',
-        'images/roof3.jpg' 
-    ];
-    
-    let currentIndex = 0; 
+    // IMAGE CAROUSEL FUNCTIONALITY
+    const images = ['images/roof1.jpg', 'images/roof2.jpg', 'images/roof3.jpg'];
+    let currentIndex = 0;
     const imageContainer = document.querySelector('.imagewheel img'); 
 
-    document.getElementById('arrow').addEventListener('click', function() {
+    document.getElementById('arrow').addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % images.length; 
-        imageContainer.src = images[currentIndex]; 
+        updateImage();
+    });
+
+    document.getElementById('arrow2').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length; 
+        updateImage();
+    });
+
+    function updateImage() {
         imageContainer.style.transition = "opacity 0.5s ease";
-        imageContainer.style.opacity = 0; 
+        imageContainer.style.opacity = 0;
 
         setTimeout(() => {
-            imageContainer.src = images[currentIndex]; 
+            imageContainer.src = images[currentIndex];
             imageContainer.style.opacity = 1;
         }, 500);
-    });
+    }
 
-    document.getElementById('arrow2').addEventListener('click', function() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length; 
-        imageContainer.src = images[currentIndex]; 
-        imageContainer.style.transition = "opacity 0.5s ease";
-        imageContainer.style.opacity = 0; 
-
-        setTimeout(() => {
-            imageContainer.src = images[currentIndex]; 
-            imageContainer.style.opacity = 1;
-        },  500);
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('#service-method .service, #service-method .method, #background .text-overlay').forEach(function(section) {
+  
+    // INITIAL ANIMATION OF SECTIONS
+    document.querySelectorAll('#service-method .service, #service-method .method, #background .text-overlay').forEach(section => {
         section.classList.add('show');
     });
 
-    setTimeout(function() {
-        document.querySelectorAll('#service-method .service, #service-method .method, #background .text-overlay').forEach(function(section) {
+    setTimeout(() => {
+        document.querySelectorAll('#service-method .service, #service-method .method, #background .text-overlay').forEach(section => {
             section.classList.add('show');
         });
     }, 500); 
-});
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-
-    menuToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('open'); 
-    });
-});
-
-
-function showText(id) {
-    const textBlock = document.getElementById(id);
-
-    if (textBlock.classList.contains('show')) {
-        textBlock.classList.remove('show');
-        setTimeout(() => textBlock.style.display = 'none', 500); 
-    } else {
-        textBlock.style.display = 'block';
-        setTimeout(() => textBlock.classList.add('show'), 10); 
-    }
-}
-
-
-//fix
-const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.querySelector('nav');
-
-menuToggle.addEventListener('click', function() {
-    navMenu.classList.toggle('open'); 
 });
