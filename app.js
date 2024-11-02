@@ -1,4 +1,3 @@
-  // TEXT REVEAL FOR SERVICES SECTION
   function showText(id) {
     console.log(id);  
     const textBlock = document.getElementById(id);
@@ -15,7 +14,6 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // NAVIGATION INDICATORS AND SCROLLING
     const navLinks = document.querySelectorAll('.nav-link');
     const activeLinkIndicator = document.getElementById('active-link-indicator');
     const hoverLinkIndicator = document.getElementById('hover-link-indicator');
@@ -111,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
   
-    // INITIAL ANIMATION OF SECTIONS
     document.querySelectorAll('#service-method .service, #service-method .method, #background .text-overlay').forEach(section => {
         section.classList.add('show');
     });
