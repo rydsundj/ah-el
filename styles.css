@@ -361,14 +361,19 @@ nav ul li a {
     text-align: center;
 }
 .help-details p {
-    font-size: 20px;
-
+    font-size: 15px;
+    font-weight: bold;
     color: #555;
     text-align: center;
     line-height: 1.6;
     margin: 0.5rem 0;
 }
 
+.under-text
+{
+
+    display: none;
+}
 
 
 .wp-block-buttons {
@@ -506,6 +511,24 @@ a {
 }
 
 @media (max-width: 1024px) {
+
+
+
+    .under-text
+    {
+        font-size: 15px;
+        font-weight: bold;
+        color: #555;
+        text-align: center;
+        line-height: 1.6;
+        margin: 0.5rem 0;
+        display: block;
+    }
+
+    .help-details p {
+        display: none;
+    }
+    
 
 
     .nav-link:hover #hover-link-indicator {
