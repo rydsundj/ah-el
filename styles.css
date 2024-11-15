@@ -513,9 +513,6 @@ h3
 }
 
 
-a {
-    -webkit-tap-highlight-color: transparent;
-}
 
 @media (max-width: 1024px) {
 
@@ -542,6 +539,9 @@ a {
         display: none; 
     }
 
+    .nav-link {
+        -webkit-tap-highlight-color: transparent;
+    }
 
     .container
     {
