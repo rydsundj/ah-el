@@ -26,6 +26,16 @@ footer {
 
 /*---- header section ---->*/
 
+
+#active-link-indicator,
+#hover-link-indicator {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background-color: #ffc638;
+    transition: width 0.8s ease;
+}
+
 header {
     background-color: black;
     background-size: cover;
