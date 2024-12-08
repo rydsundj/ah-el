@@ -124,6 +124,7 @@ nav ul li a {
 
 .image-container {
   position: relative;
+  align-items: center;
 }
 
 .imagewheel img {
@@ -163,7 +164,9 @@ nav ul li a {
   margin-left: 10%;
   margin-right: 10%;
   padding-bottom: 20px;
+  justify-content: center; /* Centers all child elements vertically */
 }
+
 
 #service-imagewheel .imagewheel,
 #service-imagewheel .service {
@@ -299,7 +302,7 @@ h3 {
 .method-content {
   margin-left: 10%;
   margin-right: 10%;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .method-content p {
@@ -379,7 +382,7 @@ h3 {
 .help-info li {
   font-size: 16px;
   color: #555;
-  margin: .5rem 0;
+  margin: .5rem ;
   padding: .5rem;
   border-bottom: 1px solid #ddd;
 }
@@ -389,20 +392,28 @@ h3 {
 }
 
 .reveal-text {
-  display: none;
   opacity: 0;
-  transition: opacity .5s ease;
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
   font-size: 22px;
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
 }
 
+.reveal-text.active {
+  opacity: 1;
+  max-height: 300px; /* Set a height that fits your largest text content */
+  visibility: visible;
+}
+
+
 .reveal-btn {
-  display: block;
   width: 600px;
   padding: 12px 20px;
-  margin: 20px auto 0;
+  margin: 10px 0;
   background-color: #ffc638;
   color: #000;
   border: none;

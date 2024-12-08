@@ -1,16 +1,7 @@
-  function showText(id) {
-    console.log(id);  
-    const textBlock = document.getElementById(id);
-
-    if (textBlock.classList.contains('show')) {
-        textBlock.classList.remove('show');
-        setTimeout(() => textBlock.style.display = 'none', 500);
-    } else {
-        textBlock.style.display = 'block';
-        setTimeout(() => textBlock.classList.add('show'), 10);
-    }
-}
-
+function showText(id) {
+    const element = document.getElementById(id);
+    element.classList.toggle('active');
+  }
 
 
 document.addEventListener('DOMContentLoaded', function() {
