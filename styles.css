@@ -164,7 +164,7 @@ nav ul li a {
   margin-left: 10%;
   margin-right: 10%;
   padding-bottom: 20px;
-  justify-content: center; /* Centers all child elements vertically */
+  justify-content: center;
 }
 
 
@@ -202,7 +202,6 @@ nav ul li a {
   transition: background-color .3s;
 }
 
-/* More CSS follows, maintaining structure */
 
 .partnerHead {
   margin: 0 5%;
@@ -405,7 +404,7 @@ h3 {
 
 .reveal-text.active {
   opacity: 1;
-  max-height: 300px; /* Set a height that fits your largest text content */
+  max-height: 300px;
   visibility: visible;
 }
 
