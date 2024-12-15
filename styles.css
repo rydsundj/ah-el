@@ -308,6 +308,9 @@ h3 {
 #mobile-bg-image {
   display: none;
 }
+#bg-image {
+  display: block;
+}
 
 .method {
   padding-top: 20px;
