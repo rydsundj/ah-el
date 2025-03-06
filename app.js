@@ -110,31 +110,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // IMAGE CAROUSEL FUNCTIONALITY
-    const images = ['images/roof1.jpg', 'images/roof2.jpg', 'images/roof3.jpg'];
-    let currentIndex = 0;
-    const imageContainer = document.querySelector('.imagewheel img'); 
-
-    document.getElementById('arrow').addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % images.length; 
-        updateImage();
-    });
-
-    document.getElementById('arrow2').addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length; 
-        updateImage();
-    });
-
-    function updateImage() {
-        imageContainer.style.transition = "opacity 0.5s ease";
-        imageContainer.style.opacity = 0;
-
-        setTimeout(() => {
-            imageContainer.src = images[currentIndex];
-            imageContainer.style.opacity = 1;
-        }, 500);
+    const images = [
+        'images/roof1.jpg', 'images/roof2.jpg', 'images/roof3.jpg', 
+        'images/roof4.jpg', 'images/roof5.jpg', 'images/roof6.jpg'
+    ];
+    
+    const imageContainer = document.querySelector('.image-container-img');
+    
+    function loadImages() {
+        imageContainer.innerHTML = ''; 
+    
+        for (let i = 0; i < images.length * 2; i++) {
+            const img = document.createElement('img');
+            img.src = images[i % images.length]; 
+            img.alt = `roof${(i % images.length) + 1}`;
+            imageContainer.appendChild(img);
+        }
     }
+    
+    loadImages(); 
 
-  
     document.querySelectorAll('#service-method .service, #service-method .method, #background .text-overlay').forEach(section => {
         section.classList.add('show');
     });
