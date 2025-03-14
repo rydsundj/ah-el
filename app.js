@@ -109,27 +109,47 @@ document.addEventListener('DOMContentLoaded', function() {
         navMenu.classList.toggle('open'); 
     });
 
-    // IMAGE CAROUSEL FUNCTIONALITY
     const images = [
-        'images/roof1.jpg', 'images/roof2.jpg', 'images/roof3.jpg', 
-        'images/roof4.jpg', 'images/roof5.jpg', 'images/roof6.jpg'
+        'images/roof1.jpg', 'images/roof6.jpg', 'images/roof4.jpg',
+        'images/roof2.jpg', 'images/roof3.jpg'
     ];
     
     const imageContainer = document.querySelector('.image-container-img');
-    
-    function loadImages() {
-        imageContainer.innerHTML = ''; 
-    
-        for (let i = 0; i < images.length * 2; i++) {
-            const img = document.createElement('img');
-            img.src = images[i % images.length]; 
-            img.alt = `roof${(i % images.length) + 1}`;
-            imageContainer.appendChild(img);
-        }
-    }
-    
-    loadImages(); 
+    let currentIndex = 0;
 
+    
+    const preloadedImages = images.map(src => {
+        const img = new Image();
+        img.src = src;
+        return img;
+    });
+
+    
+
+    function showImage(index) {
+        imageContainer.innerHTML = ''; 
+        const img = document.createElement('img');
+        img.src = preloadedImages[index].src;
+        img.alt = `roof${index + 1}`;
+        imageContainer.appendChild(img);
+    }
+    showImage(currentIndex);
+    
+    document.getElementById('prev-btn').addEventListener('click', (event) => {
+        event.preventDefault();
+        event.target.blur();
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    });
+    
+    document.getElementById('next-btn').addEventListener('click', (event) => {
+        event.preventDefault();
+        event.target.blur();
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    });
+    
+    
     document.querySelectorAll('#service-method .service, #service-method .method, #background .text-overlay').forEach(section => {
         section.classList.add('show');
     });

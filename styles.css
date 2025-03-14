@@ -151,30 +151,36 @@ nav ul li a {
   white-space: nowrap;
 }
 
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow-button.left {
+  left: 10px;
+}
+
+.arrow-button.right {
+  right: 10px;
+}
+
 .image-container-img {
   display: flex;
-  gap: 10px; 
-  width: max-content;
-  flex-shrink: 0;
-  animation: slide-left 20s linear infinite;
-  width:100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-container-img img {
   flex-shrink: 0;
 }
-
-@keyframes slide-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-205%);
-  }
-}
-
-
-  
   
 #service-imagewheel {
   display: flex;
